@@ -10,8 +10,9 @@ import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
     static let shared = LocationManager()
-    
     private let locationManager = CLLocationManager()
+    
+    var onLocationReceived: ((CLLocation) -> Void)?
     
     override init() {
         super.init()
@@ -19,18 +20,19 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    
-    
-    // MARK: - CLLocationManagerDelegate
+    func requestLocation() {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation() // Запрос однократного местоположения
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        print("Location: \(location)")
+        onLocationReceived?(location) // Вызов замыкания с последним местоположением
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // Errores de localización
+        print("Failed to update location: \(error)")
     }
     
-
+    
 }

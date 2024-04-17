@@ -10,6 +10,7 @@ install! 'cocoapods', warn_for_unused_master_specs_repo: false
 target 'ClimaEs' do
   pod 'Alamofire', '~> 5.4'
   pod 'SnapKit', '~> 5.7.0'
+  pod 'RealmSwift'
 end
 
 post_install do |installer|

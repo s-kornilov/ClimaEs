@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ClimaEs
 =======
 # 🌤️ ClimaEs (versión en bruto)
@@ -15,7 +14,7 @@
 ## Por realizar
 <ul>
   <li>Añadir Realm y base de datos de ciudades españolas (para las que se dispone de datos de AEMET) con ±8000 coordenadas de ciudades.</li>
-  <li>Configurar y verificar la geolocalización del usuario, solicitar la provincia a través de la geocodificación inversa de OSM (Core Location).</li>
+  <li>~~Configurar y verificar la geolocalización del usuario, solicitar la provincia a través de la geocodificación inversa de OSM (Core Location).~~ Creo que es más rápido hacer una búsqueda por coordenadas que a través de una consulta OSM</li>
   <li>Visualización en la pantalla principal: previsiones meteorológicas diarias y horarias de la ciudad más cercana.</li>
   <li>Pantalla adicional que muestra la fuerza del viento en el mapa</li>
   <li>Añadir localizaciones en otros idiomas</li>
@@ -27,4 +26,3 @@
 Los datos pertenecen a Agencia Estatal de Meteorología - AEMET. Gobierno de España
 © AEMET. Autorizado el uso de la información y su reproducción citando a AEMET como autora de la misma.
 http://www.aemet.es
->>>>>>> 3a10d82 (Initial commit)

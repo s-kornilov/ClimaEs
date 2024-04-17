@@ -18,7 +18,7 @@
 		4942A6C62BB6090600393568 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942A6C52BB6090600393568 /* Hooks.swift */; };
 		4942A6CA2BB62D5C00393568 /* WindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942A6C92BB62D5C00393568 /* WindViewController.swift */; };
 		4942A6CC2BB62FF400393568 /* CurrentCityBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942A6CB2BB62FF400393568 /* CurrentCityBar.swift */; };
-		4942A6CE2BB6BE7700393568 /* CurrentCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942A6CD2BB6BE7700393568 /* CurrentCity.swift */; };
+		4942A6CE2BB6BE7700393568 /* CurrentCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942A6CD2BB6BE7700393568 /* CurrentCityView.swift */; };
 		4942A6D22BB702BD00393568 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942A6D12BB702BD00393568 /* NetworkManager.swift */; };
 		4942A6D42BB70CB800393568 /* BeachDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942A6D32BB70CB800393568 /* BeachDataModel.swift */; };
 		4942A6D62BB832E000393568 /* BeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942A6D52BB832E000393568 /* BeachView.swift */; };
@@ -35,6 +35,7 @@
 		494DEE962BC175B20050A179 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494DEE952BC175B20050A179 /* MapViewController.swift */; };
 		49B2583A2BC57C8700ED0E5B /* BeachXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B258392BC57C8700ED0E5B /* BeachXMLParser.swift */; };
 		49B2583F2BC731A500ED0E5B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2583E2BC731A500ED0E5B /* LocationManager.swift */; };
+		49C092002BCEDB6F002BCCF6 /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C091FF2BCEDB6F002BCCF6 /* CityData.swift */; };
 		49E422542BB5FF8E0018864D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E422532BB5FF8E0018864D /* WeatherViewController.swift */; };
 		49E422562BB5FFCC0018864D /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E422552BB5FFCC0018864D /* WeatherView.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +74,7 @@
 		4942A6C52BB6090600393568 /* Hooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hooks.swift; sourceTree = "<group>"; };
 		4942A6C92BB62D5C00393568 /* WindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindViewController.swift; sourceTree = "<group>"; };
 		4942A6CB2BB62FF400393568 /* CurrentCityBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCityBar.swift; sourceTree = "<group>"; };
-		4942A6CD2BB6BE7700393568 /* CurrentCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCity.swift; sourceTree = "<group>"; };
+		4942A6CD2BB6BE7700393568 /* CurrentCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCityView.swift; sourceTree = "<group>"; };
 		4942A6D12BB702BD00393568 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4942A6D32BB70CB800393568 /* BeachDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachDataModel.swift; sourceTree = "<group>"; };
 		4942A6D52BB832E000393568 /* BeachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachView.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		494DEE952BC175B20050A179 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		49B258392BC57C8700ED0E5B /* BeachXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachXMLParser.swift; sourceTree = "<group>"; };
 		49B2583E2BC731A500ED0E5B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		49C091FF2BCEDB6F002BCCF6 /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
 		49E422532BB5FF8E0018864D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		49E422552BB5FFCC0018864D /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		F01EBFD833228702C278FFB8 /* Pods-ClimaEs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaEs.debug.xcconfig"; path = "Target Support Files/Pods-ClimaEs/Pods-ClimaEs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				4942A6C52BB6090600393568 /* Hooks.swift */,
 				4942A6DC2BB8400900393568 /* BeachStore.swift */,
 				4942A6E12BB8459500393568 /* BeachData.swift */,
+				49C091FF2BCEDB6F002BCCF6 /* CityData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -243,7 +246,7 @@
 				49E422552BB5FFCC0018864D /* WeatherView.swift */,
 				49E422532BB5FF8E0018864D /* WeatherViewController.swift */,
 				4942A6CB2BB62FF400393568 /* CurrentCityBar.swift */,
-				4942A6CD2BB6BE7700393568 /* CurrentCity.swift */,
+				4942A6CD2BB6BE7700393568 /* CurrentCityView.swift */,
 				4942A6EE2BBEE32500393568 /* CityListViewController.swift */,
 			);
 			path = Weather;
@@ -454,6 +457,7 @@
 				4942A6EF2BBEE32500393568 /* CityListViewController.swift in Sources */,
 				4942A6CA2BB62D5C00393568 /* WindViewController.swift in Sources */,
 				4942A6E22BB8459500393568 /* BeachData.swift in Sources */,
+				49C092002BCEDB6F002BCCF6 /* CityData.swift in Sources */,
 				49E422542BB5FF8E0018864D /* WeatherViewController.swift in Sources */,
 				494DEE962BC175B20050A179 /* MapViewController.swift in Sources */,
 				4942A6CC2BB62FF400393568 /* CurrentCityBar.swift in Sources */,
@@ -462,7 +466,7 @@
 				4942A6D42BB70CB800393568 /* BeachDataModel.swift in Sources */,
 				493E45F52BB5DA3200B951BD /* SceneDelegate.swift in Sources */,
 				49B2583F2BC731A500ED0E5B /* LocationManager.swift in Sources */,
-				4942A6CE2BB6BE7700393568 /* CurrentCity.swift in Sources */,
+				4942A6CE2BB6BE7700393568 /* CurrentCityView.swift in Sources */,
 				4942A6D62BB832E000393568 /* BeachView.swift in Sources */,
 				49B2583A2BC57C8700ED0E5B /* BeachXMLParser.swift in Sources */,
 			);

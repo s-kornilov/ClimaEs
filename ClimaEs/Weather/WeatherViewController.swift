@@ -9,27 +9,24 @@ import UIKit
 import SnapKit
 import CoreLocation
 
-class WeatherViewController: UIViewController, CLLocationManagerDelegate {
+class WeatherViewController: UIViewController {
     let weatherView = WeatherView()
     let currentCityBar = CurrentCityBar()
-    let currentCity = CurrentCity()
-    
-    let locationManager = CLLocationManager()
+    let currentCity = CurrentCityView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        
-        
+ 
         setupBackground()
         setupViews()
         setupConstraint()
         setupNavigationBar()
         
+        LocationManager.shared.onLocationReceived = { [weak self] location in
+                    self?.updateWeather(for: location)
+                }
+        LocationManager.shared.requestLocation()
     }
-    
-    
     
     private func setupViews() {
         view.addSubview(weatherView)
@@ -41,7 +38,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         let currentCityBarItem = UIBarButtonItem(customView: currentCityBar)
         navigationItem.leftBarButtonItem = currentCityBarItem
         
-        let currentCityBarIcon = UIImage(systemName: "list.dash") // Используйте свою иконку
+        let currentCityBarIcon = UIImage(systemName: "list.dash")
         let currentCityBarRightButton = UIBarButtonItem(image: currentCityBarIcon, style: .plain, target: self, action: #selector(goToNextViewController))
         navigationItem.rightBarButtonItem = currentCityBarRightButton
         
@@ -66,12 +63,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         navigationController?.pushViewController(cityListVC, animated: true)
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            print("Location: \(location)")
-        }
-    }
     
+    func updateWeather(for location: CLLocation) {
+            print("Updating weather for coordinates: \(location.coordinate.latitude), \(location.coordinate.longitude)")
+        }
     
 }
 

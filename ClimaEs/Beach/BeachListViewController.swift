@@ -153,17 +153,17 @@ extension BeachListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension BeachListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath == expandedIndexPath {
-            return 200
-        }
+//        if indexPath == expandedIndexPath {
+//            return 200
+//        }
         return 100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // Manejo de la expansión/colapso celular
-        expandedIndexPath = (expandedIndexPath == indexPath) ? nil : indexPath
+//        // Manejo de la expansión/colapso celular
+//        expandedIndexPath = (expandedIndexPath == indexPath) ? nil : indexPath
         tableView.beginUpdates()
         tableView.endUpdates()
     }
@@ -173,7 +173,6 @@ extension BeachListViewController: UITableViewDelegate {
             self?.weatherDataForBeaches.removeValue(forKey: BeachesStore.shared.favoriteBeaches[indexPath.row].beachId)
             BeachesStore.shared.favoriteBeaches.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.reloadData()
             completionHandler(true)
         }
         
